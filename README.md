@@ -11,3 +11,50 @@ The pricing system operates by utilizing 4 parameters as input for a Light Gradi
 - The Product Sales History, also stored in MongoDB, provides historical sales data that enables the model to understand trends and demand patterns.
   
 These parameters are fed into the LGBM model, which calculates an adjustment value that is added to the product's original price to derive the selling price. The selling price is dynamic and reflects real-time market conditions, customer demand, and competitor strategies. This selling price is presented to customers on the frontend, ensuring that each product is sold at a price tailored to these influencing factors. Since the selling price can differ from the original price either increased or decreased, the system effectively personalizes the pricing for each transaction. Once a purchase is made, the relevant data, including the calculated selling price, is recorded in the Sales History section of the MongoDB database, contributing to the continuous improvement and relevance of the pricing model.
+
+![image alt](https://github.com/KowshikBalasubramanian/AutomatedPricingSystem/blob/f16b281c742e2e5ba2ccefa4146b14e4d0251029/Picture1.png)
+
+## Data Analytics and Machine Learning Model
+
+1.	Dataset Preprocessing:
+-	Aggregated features like user_traffic into discrete levels (1-5) for better interpretability.
+-	Removed less impactful features (product_model, season_offer).
+-	Engineered new features:
+-	Valuation Difference (difference of selling and original price).
+-	Competitor_Difference (price gap with competitors).
+2.	Normalization:
+ Applied z-score normalization to ensure consistent scaling and improve model performance.
+3.	Model Development:
+-	Trained a Light Gradient Boosting Machine (LightGBM) with an MAE of 7, outperforming a Genetic Algorithm-optimized Random Forest (MAE: 11).
+-	LightGBM effectively captured feature interactions, leveraging the engineered data.
+4.	Deployment: Converted the LightGBM model to ONNX format, enabling cross-platform compatibility and efficient deployment.
+
+
+## Backend Workflow
+1.	Technologies:
+o	Built with Node.js + Express.js, enabling robust and scalable REST APIs and MongoDB to utilize a NoSQL DBMS.
+2.	API Features:
+o	Integrated machine learning model for dynamic pricing.
+o	REST APIs for managing products, users, orders, billing, and authentication.
+o	Implemented entire CRUD operations using Mongoose for MongoDB.
+3.	Concurrent Request Handling:
+o	Deployed a Quart API (Python) to efficiently handle up to 90 concurrent REST API requests, enhancing system asynchronous operations.
+4.	Additional Integrations:
+o	Python Web Scraping API for extracting competitor pricing data from eBay.
+o	Integrated Google Analytics for tracking and analyzing real-time user traffic patterns.
+
+## Frontend Workflow
+1.	Framework and Libraries:	Built with ReactJS, utilizing Context API for state management and Bootstrap for responsive UI.
+2.	Authentication: Integrated Firebase for user authentication and JWT for secure, role-based access control.
+3.	Key Components:
+- User functionalities: UI for Home, Shop, About, Contact, Orders, and Profile.
+-	Admin functionalities: Monitor sales data and manage product listings. Enable or disable seasonal offers with intuitive controls.
+
+## Deployment Workflow
+1.	Backend Deployment:
+-	Render: Deployed the Node.js + Express.js backend and Quart API application for web scraping.
+2.	Frontend Deployment:
+-	Netlify: Deployed the ReactJS frontend in Netlify for ease of maintenance reliable performance.
+3.	Live Application:	Accessible at https://autopricesystem.netlify.app/.
+
+
