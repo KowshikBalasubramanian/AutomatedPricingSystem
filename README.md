@@ -29,6 +29,22 @@ These parameters are fed into the LGBM model, which calculates an adjustment val
 -	LightGBM effectively captured feature interactions, leveraging the engineered data.
 4.	Deployment: Converted the LightGBM model to ONNX format, enabling cross-platform compatibility and efficient deployment.
 
+## EXPLORATORY DATA ANALYSIS BEFORE FEATURE ENGINEERING
+![image alt](https://github.com/KowshikBalasubramanian/AutomatedPricingSystem/blob/4a886f77573098ee932310403dc4feace6175d61/Picture2.png)
+
+## EXPLORATORY DATA ANALYSIS AFTER FEATURE ENGINEERING
+![image alt](https://github.com/KowshikBalasubramanian/AutomatedPricingSystem/blob/4a886f77573098ee932310403dc4feace6175d61/Picture3.png)
+![image alt](https://github.com/KowshikBalasubramanian/AutomatedPricingSystem/blob/4a886f77573098ee932310403dc4feace6175d61/Picture4.png)
+![image alt](https://github.com/KowshikBalasubramanian/AutomatedPricingSystem/blob/4a886f77573098ee932310403dc4feace6175d61/Picture5.png)
+![image alt](https://github.com/KowshikBalasubramanian/AutomatedPricingSystem/blob/4a886f77573098ee932310403dc4feace6175d61/Picture6.png)
+![image alt](https://github.com/KowshikBalasubramanian/AutomatedPricingSystem/blob/4a886f77573098ee932310403dc4feace6175d61/Picture7.png)
+![image alt](https://github.com/KowshikBalasubramanian/AutomatedPricingSystem/blob/4a886f77573098ee932310403dc4feace6175d61/Picture8.png)
+
+## Random Forest ML Model Performance Metrics
+![image alt](https://github.com/KowshikBalasubramanian/AutomatedPricingSystem/blob/4a886f77573098ee932310403dc4feace6175d61/Picture9.png)
+
+## Light Gradient Boosting Machine ML Model Performance Metrics
+![image alt](https://github.com/KowshikBalasubramanian/AutomatedPricingSystem/blob/4a886f77573098ee932310403dc4feace6175d61/Picture10.png)
 
 ## Backend Workflow
 1.	Technologies:
