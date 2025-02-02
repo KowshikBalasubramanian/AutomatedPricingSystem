@@ -12,7 +12,7 @@ The pricing system operates by utilizing 4 parameters as input for a Light Gradi
   
 These parameters are fed into the LGBM model, which calculates an adjustment value that is added to the product's original price to derive the selling price. The selling price is dynamic and reflects real-time market conditions, customer demand, and competitor strategies. This selling price is presented to customers on the frontend, ensuring that each product is sold at a price tailored to these influencing factors. Since the selling price can differ from the original price either increased or decreased, the system effectively personalizes the pricing for each transaction. Once a purchase is made, the relevant data, including the calculated selling price, is recorded in the Sales History section of the MongoDB database, contributing to the continuous improvement and relevance of the pricing model.
 
-![image alt](https://github.com/KowshikBalasubramanian/AutomatedPricingSystem/blob/f16b281c742e2e5ba2ccefa4146b14e4d0251029/Picture1.png)
+![image alt](https://github.com/KowshikBalasubramanian/AutomatedPricingSystem/blob/7694bee3ee5a104a89adaff9f69d3791b9bfe557/Mind%20Maps.jpg)
 
 ## Data Analytics and Machine Learning Model
 
